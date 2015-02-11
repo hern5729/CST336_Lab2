@@ -36,4 +36,19 @@ function displayTable($array1){
     echo "</tr>";
 }
 
-?>
+function createArray()
+{
+    $array = array();
+    $counter = 0;
+    while(counter < 5)
+    {
+        $randNum = rand(1,13);
+        if(!(checkDuplicates($array,$randNum)))
+        {
+            $array[] = $randNum; 
+            $counter++;
+        }
+        
+    }
+    return $array;
+}
