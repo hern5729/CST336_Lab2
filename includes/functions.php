@@ -17,17 +17,17 @@ function generateRandomSuit(){
 }
 
 function checkDuplicates($array, $numToCompare, $suitToCompare){
-    for($index = 0; index < count($array); $index++){
-        if($array[index] == $numToCompare and $array[index+1] == $suitToCompare)
+    for($index = 0; $index < count($array); $index++){
+        if($array[$index+1] == $numToCompare)
             return true;
         $index++;
     }
     return false;
 }
 
-function displayTable($array1){
+function displayTable($array){
     echo "<tr>";
-    for($index = 0; index < count($array); $index++){
+    for($index = 0; $index < count($array); $index++){
         echo "<td>";
             echo "<img src='img/cards/" . $array[$index] . "/" . $array[$index+1] . ".png'>";
         echo "</td>";
@@ -40,12 +40,14 @@ function createArray()
 {
     $array = array();
     $counter = 0;
-    while(counter < 5)
+    while($counter < 5)
     {
         $randNum = rand(1,13);
-        if(!(checkDuplicates($array,$randNum)))
+        $randSuit = generateRandomSuit();
+        if(!(checkDuplicates($array,$randNum, $randSuit)))
         {
-            $array[] = $randNum; 
+            array_push($array, $randSuit, $randNum); 
+            
             $counter++;
         }
         
