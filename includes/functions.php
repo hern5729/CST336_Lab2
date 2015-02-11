@@ -18,7 +18,9 @@ function generateRandomSuit(){
 
 function checkDuplicates($array, $valueToCompare){
     for($index = 0; index < count($array); $index++){
-        if(i)
+        if($array[index] == $valueToCompare)
+            return true;
     }
+    return false;
 }
 ?>
