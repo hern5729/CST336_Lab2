@@ -23,4 +23,21 @@ function checkDuplicates($array, $valueToCompare){
     }
     return false;
 }
+
+function createArray()
+{
+    $array = array();
+    $counter = 0;
+    while(counter < 5)
+    {
+        $randNum = rand(1,13);
+        if(!(checkDuplicates($array,$randNum)))
+        {
+            $array[] = $randNum; 
+            $counter++;
+        }
+        
+    }
+    return $array;
+}
 ?>
