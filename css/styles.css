@@ -1,6 +1,6 @@
 
 h1{
-    test-align: center;
     font-size: 24px;
     color: grey;
+    text-align: center;
 }
