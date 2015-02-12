@@ -25,7 +25,14 @@ To change this template use Tools | Templates.
             displayTable("brian", $brian);
         echo "</table>";
     ?>
-    
+    <h2>
+        Rules:
+    </h2>
+    <p>
+        Each player gets five random cards, including face cards.
+Each player must have different card values (no duplicate values). Jack is 11 points, Queen 12, and King 13. Ace is always one.
+The player with the sum of card values closer to 42 wins.
+    </p>
     
 </body>
 </html>
