@@ -18,7 +18,7 @@ To change this template use Tools | Templates.
     ?>
     
     <?php
-        echo "<table>";
+        echo "<table align = 'center'>";
             displayTable("monse", $monse);
             displayTable("addie", $addie);
             displayTable("jose", $jose);
