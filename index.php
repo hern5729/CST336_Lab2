@@ -11,17 +11,20 @@ To change this template use Tools | Templates.
     <?php
         include 'includes/functions.php';
         $monse = createArray();
-        $adilene = createArray();
+        $addie = createArray();
         $jose = createArray();
         $brian = createArray();
+    ?>
     
+    <?php
         echo "<table>";
-            displayTable($monse);
-            displayTable($adilene);
-            displayTable($jose);
-            displayTable($brian);
+            displayTable("monse", $monse);
+            displayTable("addie", $addie);
+            displayTable("jose", $jose);
+            displayTable("brian", $brian);
         echo "</table>";
     ?>
+    
     
 </body>
 </html>

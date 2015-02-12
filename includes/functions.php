@@ -1,7 +1,6 @@
 <?php
 
 function generateRandomSuit(){
-    
     $suit = rand(1,4);
     switch($suit){
         case 1: $folder = "clubs";
@@ -25,14 +24,18 @@ function checkDuplicates($array, $numToCompare, $suitToCompare){
     return false;
 }
 
-function displayTable($array){
+function displayTable($name , $array){
+    $total = 0;
     echo "<tr>";
+    echo "<td><img src='img/teamImages/" . $name . ".png'></td>";
     for($index = 0; $index < count($array); $index++){
+        $total = $total + $array[$index+1];
         echo "<td>";
             echo "<img src='img/cards/" . $array[$index] . "/" . $array[$index+1] . ".png'>";
         echo "</td>";
         $index++;
     }
+    echo "<td>". $total . "</td>";
     echo "</tr>";
 }
 
@@ -54,3 +57,4 @@ function createArray()
     }
     return $array;
 }
+?>
