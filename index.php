@@ -45,7 +45,7 @@ To change this template use Tools | Templates.
     <form action="">
      <input  id="btn" type="submit" value="Play Again" style="background-color: green; color:#fff"/>
     </form>
-=======
+
     <h2>
         Rules:
     </h2>
