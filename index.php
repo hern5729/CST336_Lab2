@@ -5,43 +5,50 @@ To change this template use Tools | Templates.
 <html>
 <head>
     <title>Lab 2</title>
-    <link href="css/styles.css" rel = "stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <h1> Silverjack </h1>
-    <?php
-        include 'includes/functions.php';
-        $monse = createArray();
-        $addie = createArray();
-        $jose = createArray();
-        $brian = createArray();
     
-        echo "<table align = 'center'>";
-            displayTable("monse", $monse);
-            displayTable("addie", $addie);
-            displayTable("jose", $jose);
-            displayTable("brian", $brian);
-                    //buttonPushed();    
+    <?php
+    $array = array();
+
+    include 'includes/functions.php';
+    $monse = createArray();
+    $addie = createArray();
+    $jose = createArray();
+    $brian = createArray();
+
+
+    echo "<table>";
+    $array = displayTable("monse", $monse);
+    $array = displayTable("addie", $addie);
+    $array = displayTable("jose", $jose);
+    $array = displayTable("brian", $brian);
     echo "</table>";
-        
+
+    $winnerTotal = abs(42 - $array[0]);
+    $winnerIndex = 0;
+
+    for($index = 1; $index < 3; $index++){
+        if(abs(42 - $array[$index]) < $winnerTotal){
+            $winnerTotal = abs(42 - $array[$index]);
+            $winnerIndex = $index;
+        }
+    }
+    switch($winnerIndex){
+        case 0: $winnerName = "Monse";
+            break;
+        case 1: $winnerName = "Addie";
+            break;
+        case 2: $winnerName = "Jose";
+            break;
+        case 3: $winnerName = "Brian";
+            break;
+    }
+
+    echo "<h1>" . $winnerName . " Won!</h1>";
     ?>
     
-    <?php
-       
-
-    ?>
-    <form action="">
-     <input  id="btn" type="submit" value="Play Again" style="background-color: green; color:#fff"/>
-    </form>
-
-    <h2>
-        Rules:
-    </h2>
-    <p>
-        Each player gets five random cards, including face cards.
-Each player must have different card values (no duplicate values). Jack is 11 points, Queen 12, and King 13. Ace is always one.
-The player with the sum of card values closer to 42 wins.
-    </p>
     
 </body>
 </html>
