@@ -5,17 +5,49 @@ h1{
     text-align: center;
 }
 
-form {
-    color: green;
-    padding-top: 36px;
-    
+h2{
+    font-size: 24px;
+    color: grey;
     text-align: center;
 }
-#btn{
-    width: 9em;
-    height: 4em;  
+form {
+    text-align: center;
+    padding-bottom: 20px;
 }
-.team{
-    width: 75px;
-    height: 75px;
+table{
+    margin: 0 auto;
+}
+#profile{
+    border-radius: 70px;
+    border: #4C4C4C 4px solid;
+}
+#total{
+    font-size:30px; 
+    font-weight:bold;
+}
+#btn{
+    width: 14em;
+    height: 5em; 
+    font-size: 15px;
+    background-color: grey;
+    color:white;
+    font-weight:bold;
+}
+#wrapper{
+    width: 700px;
+    margin: auto;
+    background: #65b6c6;
+    padding: 10px;
+    border-radius: 15px;
+}
+#rules{
+    width: 200px;
+    background: #65b6c6;
+    padding: 10px;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 5px;
+    padding-right: 30px;
 }

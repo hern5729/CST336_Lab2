@@ -27,7 +27,7 @@ function checkDuplicates($array, $numToCompare, $suitToCompare){
 function displayTable($name , $array){
     $total = 0;
     echo "<tr>";
-    echo "<td><img src='img/teamImages/" . $name . ".png'></td>";
+    echo "<td><img src='img/teamImages/" . $name . ".png' id='profile'></td>";
     for($index = 0; $index < count($array); $index++){
         $total = $total + $array[$index+1];
         echo "<td>";
@@ -35,7 +35,7 @@ function displayTable($name , $array){
         echo "</td>";
         $index++;
     }
-    echo "<td>". $total . "</td>";
+    echo "<td id='total'>". $total . "</td>";
     echo "</tr>";
     
     return $total;
@@ -52,10 +52,8 @@ function createArray()
         if(!(checkDuplicates($array,$randNum, $randSuit)))
         {
             array_push($array, $randSuit, $randNum); 
-            
             $counter++;
         }
-        
     }
     return $array;
 }
