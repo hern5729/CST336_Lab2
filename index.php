@@ -71,6 +71,9 @@ To change this template use Tools | Templates.
         <form>
             <input  id="btn" type="submit" value="Play Again"/>
         </form>
+        <footer>
+            &copy; Created by:M. Hernandez,A. Constante,J. Diaz,B. De Anda
+        </footer>
 
     </div>
 
